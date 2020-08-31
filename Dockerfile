@@ -8,8 +8,7 @@ ENV AMM_URL https://github.com/lihaoyi/Ammonite/releases/download/$AMM_VERSION/$
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends curl golang-go git ca-certificates
 
-RUN (echo '#!/usr/bin/env sh' && curl -L "$AMM_URL") > /usr/local/bin/amm \
- && chmod +x "/usr/local/bin/amm"
+RUN curl -L "$AMM_URL" > /usr/bin/amm && chmod +x /usr/bin/amm
 
 RUN amm -c ""
 
