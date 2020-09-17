@@ -1,4 +1,4 @@
-FROM openjdk:11-buster
+FROM adoptopenjdk:11-hotspot
 
 ARG SCALA_VERSION=2.13
 ARG AMM_VERSION=2.2.0
